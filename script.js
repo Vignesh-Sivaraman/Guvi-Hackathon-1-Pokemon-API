@@ -115,7 +115,7 @@ async function getPokemonData(arrayData, page) {
       details.classList.add("details");
       const name = document.createElement("div");
       name.classList.add("name");
-      name.innerText = `Name: ${pokemonName}`;
+      name.innerHTML = `Name: <span>${pokemonName}</span>`;
       const image = document.createElement("img");
       image.setAttribute("src", `${pokemonImageSource}`);
       image.setAttribute("alt", `${pokemonName}`);
@@ -130,7 +130,7 @@ async function getPokemonData(arrayData, page) {
       });
       const weight = document.createElement("div");
       weight.classList.add("weight");
-      weight.innerText = `Weight: ${pokemonWeight} hg`;
+      weight.innerHTML = `Weight: <span>${pokemonWeight} hg</span>`;
       const button = document.createElement("button");
       button.classList.add("moves");
       button.textContent = "click for Moves";
@@ -148,12 +148,6 @@ async function getPokemonData(arrayData, page) {
         movesDiv.append(tableTitle);
         let table = document.createElement("table");
         table.classList.add("table", "table-bordered");
-        //   table.innerHTML = `<thead>
-        //    <tr>
-        //      <th>Moves</th>
-        //    </tr>
-        //  </thead>
-        // `;
         let tableBody = document.createElement("TBODY");
         tableBody.setAttribute("id", "t-body");
         table.append(tableBody);
@@ -172,7 +166,7 @@ async function getPokemonData(arrayData, page) {
         infoArea.classList.add("infoArea");
 
         const reloadButton = document.createElement("button");
-        reloadButton.classList.add("moves");
+        reloadButton.classList.add("reload");
         reloadButton.innerText = "return";
         reloadButton.addEventListener("click", () => {
           location.reload();
@@ -189,26 +183,3 @@ async function getPokemonData(arrayData, page) {
     console.error(err);
   }
 }
-
-// function addItems(dataArray, page) {
-//   let table = document.createElement("table");
-//   table.classList.add("table", "table-bordered");
-//   table.innerHTML = `<thead>
-//    <tr>
-//      <th>Moves</th>
-//    </tr>
-//  </thead>
-// `;
-//   let tableBody = document.createElement("TBODY");
-//   tableBody.setAttribute("id", "t-body");
-//   table.append(tableBody);
-//   for (let moves of pokemonMoves) {
-//     let currentRow = document.createElement("TR");
-//     let data1 = document.createElement("TD");
-//     data1.innerText = `${moves}`;
-//     currentRow.append(data1);
-//     tableBody.append(currentRow);
-//     table.append(tableBody);
-//     tableDiv.append(table);
-//   }
-// }
