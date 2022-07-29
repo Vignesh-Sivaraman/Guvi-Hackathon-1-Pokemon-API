@@ -124,10 +124,12 @@ img {
 }
 
 .infoArea .name {
-  color: rgb(35, 61, 59);
+  color: #816700;
   font-weight: bold;
   font-family: sans-serif;
-  font-size: 2rem;
+  border: 3px solid rgb(3, 97, 238);
+  font-size: 1.75rem;
+  background-color: white;
 }
 
 .table {
@@ -262,6 +264,8 @@ tr:nth-child(even) {
   }
   .infoArea .name {
     font-size: 1rem;
+    width: 100%;
+    text-align: center;
   }
   .infoArea img {
     width: 80%;
