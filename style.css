@@ -279,6 +279,8 @@ tr:nth-child(even) {
     width: 70%;
     font-size: 1rem;
   }
+  .title-box {
+    background-size: 100% 100%;
 }
 
 @media (min-width: 801px) {
