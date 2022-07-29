@@ -39,9 +39,7 @@ async function getPokemonNames() {
     let currentPage = 1;
     for (let buttons of btngroup) {
       buttons.addEventListener("click", () => {
-        // console.log(buttons.id);
         let temp = document.getElementById(currentPage.toString());
-        console.log(temp);
         let pageNumber;
         contentDiv.innerHTML = ``;
         switch (buttons.id) {
@@ -91,7 +89,6 @@ async function getPokemonData(arrayData, page) {
     let start = page * 5 - 5;
     let end = page * 5;
     arrayData = arrayData.slice(start, end);
-    console.log(arrayData);
     arrayData.forEach(async (element) => {
       let pokemonName = element.name;
 
