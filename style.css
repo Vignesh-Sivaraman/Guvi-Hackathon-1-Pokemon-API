@@ -281,6 +281,11 @@ tr:nth-child(even) {
   }
   .title-box {
     background-size: 100% 100%;
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 @media (min-width: 801px) {
@@ -289,16 +294,5 @@ tr:nth-child(even) {
   }
   td {
     font-size: 1rem;
-  }
-}
-
-.hidden {
-  display: none;
-}
-
-@media (max-width: 374px) {
-  .buttons button {
-    padding: 2% 3%;
-    font-size: 0.5rem;
   }
 }
